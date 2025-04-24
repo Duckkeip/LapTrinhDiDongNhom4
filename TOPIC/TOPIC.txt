@@ -1,0 +1,31 @@
+﻿ 1. Đăng nhập / Đăng ký
+Giao diện đăng nhập dành cho quản trị viên hoặc người dùng
+
+Xác thực tài khoản bằng PHP + MySQL hoặc Firebase
+
+🔹 2. Quản lý sách
+Thêm/sửa/xóa sách
+
+Danh sách sách (dùng RecyclerView)
+
+Tìm kiếm theo tên / tác giả / thể loại
+
+🔹 3. Quản lý người dùng
+Danh sách thành viên
+
+Xem lịch sử mượn sách của từng người
+
+🔹 4. Quản lý mượn - trả sách
+Giao diện chọn sách mượn
+
+Ghi lại ngày mượn, ngày trả
+
+Hiển thị trạng thái: Đang mượn / Đã trả / Trễ hạn
+
+🔹 5. Thống kê
+Số sách còn lại
+
+Sách mượn nhiều nhất
+
+Người mượn tích cực nhất
+
