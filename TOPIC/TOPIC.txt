@@ -1,31 +1,34 @@
-﻿ 1. Đăng nhập / Đăng ký
-Giao diện đăng nhập dành cho quản trị viên hoặc người dùng
-
-Xác thực tài khoản bằng PHP + MySQL hoặc Firebase
-
-🔹 2. Quản lý sách
-Thêm/sửa/xóa sách
-
-Danh sách sách (dùng RecyclerView)
-
-Tìm kiếm theo tên / tác giả / thể loại
-
-🔹 3. Quản lý người dùng
-Danh sách thành viên
-
-Xem lịch sử mượn sách của từng người
-
-🔹 4. Quản lý mượn - trả sách
-Giao diện chọn sách mượn
-
-Ghi lại ngày mượn, ngày trả
-
-Hiển thị trạng thái: Đang mượn / Đã trả / Trễ hạn
-
-🔹 5. Thống kê
-Số sách còn lại
-
-Sách mượn nhiều nhất
-
-Người mượn tích cực nhất
-
+3.1. Phân tích hệ thống
+Ứng dụng cần đáp ứng các chức năng sau:
+3.1.1 Quản lý khoản thu
+•	Cho phép người dùng nhập thông tin các khoản thu (lương, thưởng, v.v.).
+•	Phân loại thu nhập theo nhóm.
+3.1.2 	Quản lý khoản chi
+•	Ghi nhận chi tiêu theo từng ngày, loại chi tiêu (ăn uống, giải trí, đi lại...).
+•	Cho phép chỉnh sửa, xóa khoản chi.
+3.1.3. Thống kê – báo cáo
+•	Hiển thị biểu đồ thu – chi theo thời gian (ngày, tháng, năm).
+•	Cảnh báo nếu chi tiêu vượt hạn mức người dùng đặt ra.
+3.1.4. Đặt hạn mức chi tiêu
+•	Cho phép người dùng thiết lập hạn mức chi tiêu cho từng loại chi tiêu hoặc tổng chi trong ngày/tháng.
+•	Gửi cảnh báo khi chi tiêu vượt ngưỡng đã đặt.
+3.1.5. Quản lý ví (nguồn tiền)
+•	Hỗ trợ tạo nhiều ví khác nhau (ví tiền mặt, ví ngân hàng, ví momo...).
+•	Gắn từng khoản thu/chi với từng ví.
+•	Hiển thị số dư còn lại trong từng ví.
+3.1.6. Ghi chú và gắn nhãn
+•	Cho phép thêm ghi chú chi tiết cho từng khoản thu/chi.
+•	Gắn nhãn để dễ tìm kiếm và phân loại (ví dụ: “cần tiết kiệm”, “đột xuất”, “hóa đơn định kỳ”).
+3.1.7. Tìm kiếm và lọc giao dịch
+•	Tìm giao dịch theo từ khóa, thời gian, loại giao dịch, ví, nhãn...
+•	Hỗ trợ sắp xếp theo số tiền, ngày giao dịch, v.v.
+3.1.8. Sao lưu và khôi phục dữ liệu
+•	Cho phép người dùng sao lưu dữ liệu ra file nội bộ (hoặc đồng bộ lên Google Drive).
+•	Hỗ trợ khôi phục dữ liệu khi đổi thiết bị hoặc cài lại ứng dụng.
+3.1.9. Bảo mật ứng dụng
+•	Thêm tính năng khóa ứng dụng bằng mã PIN, vân tay hoặc nhận diện khuôn mặt (nếu thiết bị hỗ trợ).
+•	Tăng tính riêng tư khi sử dụng ứng dụng.
+3.1.10. Đăng nhập và đăng xuất 
+•	Nếu triển khai được, có thể cho phép người dùng tạo tài khoản và đăng nhập 
+•	Sử dụng Firebase hoặc backend PHP + MySQL 
+•	Đồng bộ dữ liệu trên nhiều thiết bị.
