@@ -1,0 +1,98 @@
+package com.example.sqlite;
+
+import com.example.sqlite.model.User;
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.content.Intent;
+import android.widget.VideoView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.sqlite.sqlite.UserDao;
+
+public class DangkyActivity extends AppCompatActivity {
+    private EditText edtUser, edtPass, edtRePass;
+    private Button btnDangKi;
+    private UserDao userDao;
+
+    private  TextView daCoTK;
+
+    private VideoView videobg;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dangky);
+
+        userDao = new UserDao(this);
+
+        edtUser = findViewById(R.id.tk);
+        edtPass = findViewById(R.id.mk);
+        edtRePass = findViewById(R.id.remk);
+        btnDangKi = findViewById(R.id.dk);
+        daCoTK = findViewById(R.id.dacotk);
+        videobg = findViewById(R.id.videobg);
+
+        //bg animation
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.videobg);
+        videobg.setVideoURI(uri);
+        videobg.start();
+
+
+        videobg.setOnPreparedListener(mp -> {
+            mp.setLooping(true); // lặp lại video
+        });
+
+        btnDangKi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String user = edtUser.getText().toString().trim();
+                String pass = edtPass.getText().toString().trim();
+                String repass = edtRePass.getText().toString().trim();
+
+                if (user.isEmpty() || pass.isEmpty() || repass.isEmpty()) {
+                    Toast.makeText(DangkyActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (!pass.equals(repass)) {
+                    Toast.makeText(DangkyActivity.this, "Mật khẩu nhập lại không khớp", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (userDao.checkUser(user)) {
+                    Toast.makeText(DangkyActivity.this, "Tên đăng nhập đã tồn tại", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                User userObj = new User();
+                userObj.setUser(user);
+                userObj.setPass(pass);
+
+                long result = userDao.insert(userObj);
+                if (result > 0) {
+                    Toast.makeText(DangkyActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(DangkyActivity.this, DangnhapActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(DangkyActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        daCoTK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển sang activity đăng nhập
+                Intent intent = new Intent(DangkyActivity.this, DangnhapActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
