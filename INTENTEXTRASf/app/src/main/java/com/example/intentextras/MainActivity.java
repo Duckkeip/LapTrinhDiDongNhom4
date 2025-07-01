@@ -1,6 +1,9 @@
 package com.example.intentextras;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -48,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
         itemTouchHelper.attachToRecyclerView(recyclerView);
+
+        SharedPreferences prefs = getSharedPreferences("LastViewedFood", MODE_PRIVATE);
+        String lastFood = prefs.getString("lastFoodName", "Bạn chưa xem món ăn nào");
+
+        TextView lastViewedTextView = findViewById(R.id.lastViewedTextView);
+        lastViewedTextView.setText("Bạn vừa xem: " + lastFood);
     }
 }
