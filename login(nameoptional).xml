@@ -1,9 +1,0 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".MainActivity">
-<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/ic_launcher_foreground" android:orientation="vertical">
-<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="200dp" android:layout_marginLeft="75dp" android:text="Trang Đăng ký!" android:textColor="#800080" android:textStyle="bold" android:textSize="40dp"/>
-<EditText android:id="@+id/tk" android:layout_marginLeft="70dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="13" android:hint="username" tools:ignore="MissingConstraints" android:inputType="text"/>
-<EditText android:id="@+id/mk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="13" android:layout_marginLeft="70dp" android:hint="password " android:inputType="textPassword" tools:layout_editor_absoluteX="72dp" tools:ignore="MissingConstraints" tools:layout_editor_absoluteY="387dp"/>
-<Button android:id="@+id/dn" android:layout_marginLeft="250dp" android:layout_marginTop="50dp" android:textColor="#00FF00" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Đăng nhập"/>
-</LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>

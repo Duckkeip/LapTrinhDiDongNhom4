@@ -1,7 +1,0 @@
-username=dyc
-username=dyc
-currentpass=123456
-newpass=1234567
-username=dyc
-currentpass=123456
-newpass=1234567
