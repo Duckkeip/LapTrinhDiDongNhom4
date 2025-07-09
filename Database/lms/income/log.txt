@@ -1,0 +1,8 @@
+Array
+(
+    [amount] => 5656565.0
+    [note] => qqqq
+    [date] => 2025-07-08 01:38:35
+    [category_id] => 1
+    [user] => dmc
+)

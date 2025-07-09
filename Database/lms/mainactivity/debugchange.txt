@@ -1,0 +1,10 @@
+username=dyc
+username=dyc
+currentpass=123456
+newpass=1234567
+username=dyc
+currentpass=123456
+newpass=1234567
+username=dmc
+currentpass=1234567
+newpass=123456
