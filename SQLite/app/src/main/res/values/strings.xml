@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">App quản lý chi tiêu cá nhân</string>
+
+    <string-array name="data_types">
+        <item>Khoản thu</item>
+        <item>Khoản chi</item>
+    </string-array>
+
+    <string-array name="chart_types">
+        <item>Biểu đồ cột</item>
+        <item>Biểu đồ tròn</item>
+        <item>Biểu đồ đường</item>
+    </string-array>
+</resources>
